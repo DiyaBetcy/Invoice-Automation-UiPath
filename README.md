@@ -24,13 +24,13 @@ This project automates the extraction of data from multiple invoice Excel files 
 ## Project Structure
 Invoice-Automation-UiPath/
 
-# Main workflow
+### Main workflow
 ├── Main.xaml 
-# Folder containing invoice files
+### Folder containing invoice files
 |── input/ 
-# Generated summary Excel
+### Generated summary Excel
 |── output/ 
-# Documentation
+### Documentation
 |── README.md 
 
 ---
