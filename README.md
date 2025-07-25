@@ -64,7 +64,8 @@ These are defined in `project.json`. UiPath Studio will auto-restore them on ope
 - Clone the repository:
 ```bash
 git clone <repo-url>
-```bash
+```
+
 - Create input and output folders inside the project folder.
 - Place your invoice files in input and run the workflow in UiPath Studio.
 
