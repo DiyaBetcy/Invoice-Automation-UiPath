@@ -26,23 +26,47 @@ Invoice-Automation-UiPath/
 
 ### Main workflow
 ├── Main.xaml 
-### Folder containing invoice files
+### Folder containing invoice files (user created)
 |── input/ 
-### Generated summary Excel
+### Generated summary Excel (user created)
 |── output/ 
-### Documentation
+### Documentation 
 |── README.md 
 
 ---
 
-## How It Works
-1. Place invoice Excel files in the **input** folder.
-2. Run the UiPath workflow.
-3. The bot reads each invoice, extracts details from specific cells (B4, B5, B6, B20 onwards for items).
-4. Merges all data into a **summary DataTable**.
-5. Writes the summary into an Excel file (`Daily Summary.xlsx`) in the output folder.
-6. Updates the title to include the latest invoice date.
+> **Note**: `input` and `output` folders are not included in this repo. You must create them manually after cloning the project.
 
+---
+
+## How It Works
+1. Create two folders in your local project directory:
+   - `input` → place invoice Excel files here.
+   - `output` → this will hold the generated summary file.
+2. Open `Main.xaml` in UiPath Studio.
+3. Install required dependencies from `project.json` (UiPath will prompt you).
+4. Run the workflow:
+   - It reads invoice files from `input/`.
+   - Extracts details from defined cell locations.
+   - Writes summarized data to `output/Daily Summary.xlsx`.
+
+---
+
+## Required Dependencies
+- UiPath.Excel.Activities
+- UiPath.System.Activities
+
+These are defined in `project.json`. UiPath Studio will auto-restore them on open.
+
+---
+
+## Usage
+- Clone the repository:
+```bash
+git clone <repo-url>
+Create input and output folders inside the project folder.
+
+Place your invoice files in input and run the workflow in UiPath Studio.
 ---
 
 ## Usage
